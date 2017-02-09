@@ -26,7 +26,7 @@ ActiveRecord::Schema.define(version: 20170209065151) do
   end
 
   create_table "orders", force: :cascade do |t|
-    t.integer  "toral",            default: 0
+    t.integer  "total",            default: 0
     t.integer  "user_id"
     t.string   "billing_name"
     t.string   "billing_address"

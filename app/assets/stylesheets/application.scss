@@ -16,3 +16,50 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome";
+
+ .navbar-wrap {
+  width: 100%; /*铺满屏幕*/
+  background: #F5F5F5; /*背景颜色*/
+  font-size: 12px; /*字体12px*/
+  height: 30px; /*设置高度*/
+  line-height: 30px; /*设置行高，实现垂直居中，口诀「如果高度等于行高，那就实现了文本的垂直居中」*/
+  color: #717171; /*字体颜色*/
+}
+
+.navbar {
+  width: 1200px; /*设置导航栏宽度1200*/
+  margin: 0 auto; /*水平居中*/
+}
+
+.navbar-left {
+  float: left; /*你去左边*/
+}
+
+.navbar-list {
+  float: right; /*你去右边*/
+  list-style-type: none;
+}
+
+
+
+.navbar-listItem {
+  float: left; /*li是block元素，我们知道block元素是会独占一行的，如果要让它们在一行，那就要加上float*/
+  padding-left: 10px; /*左边加点空间，不然太挤啦*/
+  padding-right: 10px; /*右边加点空间，不然太挤啦*/
+}
+
+.navbar-spacer {
+  float: left; /*同样的，你也要float*/
+  width: 1px; /*宽度为1，就可以拿到当分隔符用了，哈哈*/
+  height: 12px; /*12px差不多，刚刚好*/
+  margin-top: 9px; /*调一下上边距*/
+  background: #ddd; /*分隔符的背景颜色*/
+}
+
+.navbar-wrap a {
+  color: #717171; /*文字的颜色*/
+  text-decoration: none; /*不要下划线啦，好丑*/
+}
+.navbar-wrap a:hover {
+  color: #C81623; /*鼠标一上去的时候，字体变成红色*/
+}

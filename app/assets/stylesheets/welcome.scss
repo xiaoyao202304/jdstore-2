@@ -1,3 +1,134 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+/* Jumbotron */
+.jumbotron {
+  height: 500px;
+  background-image: url("https://ww3.sinaimg.cn/large/006tKfTcgy1fd9acwkzlxj30qe0jbe5o.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  font-family: Helvetica, Arial;
+  position: relative;
+  letter-spacing: 2px;
+
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: transparentize(#D08A91, .75);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .text-content {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.jumbotron-title {
+	color: #fff;
+  text-align: center;
+  padding: 125px 20px 0;
+  font-size: 40px !important;
+  line-height: 1.5;
+}
+
+// .jumbotron h2{
+// 	text-align: center;
+//   color: #FFF;
+//   font-size: 40px;
+//   margin: 0;
+//   width: 100%;
+// }
+
+.jumbotron h2:first-child{
+  margin:120px 0 0;
+}
+
+/* Banner */
+.banner, .supporting {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.banner {
+  background-color:#36343f;
+  height:180px;
+  color: #fff;
+}
+
+.banner a{
+	background-color: rgba(216,25,47,.5);
+  color: #fff;
+  margin-top: 24px;
+  border:0px;
+}
+
+.section h3 {
+  margin: 0;
+  padding: 0 0 20px;
+  font-size: 25px;
+}
+
+.banner h3 {
+  margin: 0;
+  padding: 0;
+  color:#fff;
+}
+
+
+/* hot product */
+.main {
+  margin-bottom: 30px;
+}
+
+.box {
+  padding: 0;
+  display: block;
+  width: 300px;
+  height: 230px;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+  margin: 20px auto;
+}
+
+.box img {
+  width: 100%;
+  transition: all 0.4s; /*这句代码的意思是，当这个元素的某个属性发现变化时，不是立刻完成，而是慢慢地在400ms内完成，这样就实现了动画的效果*/
+  -webkit-transition: all 0.4s;
+  -webkit-transition:all 0.4s ease-in-out; /*让「谷歌浏览器」支持这个属性*/
+  -moz-transition:all 0.4s ease-in-out; /*让「火狐浏览器」支持这个属性*/
+  -o-transition:all 0.4s ease-in-out; /*让「safari」支持属性*/
+  -ms-transition:all 0.4s ease-in-out; /*让「IE浏览器」支持这个属性*/
+}
+
+.box:hover img {
+  transform: scale(1.2); /*在400ms内，图片的尺寸从 1倍 放大到 1.2倍*/
+  -webkit-transform: scale(1.2);
+  -moz-transform: scale(1.2);
+  -o-transform: scale(1.2);
+  -ms-transform: scale(1.2);
+}
+
+ .title {
+  padding: 60px 0 30px 0;
+  h2 {
+    text-align: center;
+    font-weight: normal;
+  }
+}

@@ -1,48 +1,79 @@
-<nav class="navbar navbar-default" role="navigation">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <a class="navbar-brand" href="/">JDStore </a>
-        </div>
+<div class="navbar-wrap">
+  <div class="navbar">
+    <div class="navbar-left"><%=link_to("欢迎来到下午茶居！", products_path)%></div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li class="active">
-              <%= link_to("Products", products_path)%>
-            </li>
-          </ul>
-            <ul class="nav navbar-nav navbar-right">
-              <li>
-                <%= link_to carts_path do  %>
-                  购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
-                <% end %>
-              </li>
-              <% if !current_user %>
-                <li><%= link_to("注册", new_user_registration_path) %></li>
-                <li><%= link_to(content_tag(:i, '登入', class: 'fa fa-sign-in'), new_user_session_path) %></li>
-              <% else %>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                    Hi!, <%= current_user.email %>
-                    <b class="caret"></b>
-                  </a>
-                  <ul class="dropdown-menu">
-                    <% if current_user.admin? %>
-                      <li>
-                        <%= link_to("Admin Panel", admin_products_path)%>
-                      </li>
-                    <% end %>
-                    <li>
-                      <%= link_to("个人订单列表", account_orders_path)%>
-                    </li>
-                    <li> <%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %> </li>
-                  </ul>
-                </li>
+    <ul class="navbar-list">
+      <li class="navbar-listItem">
+        <%= link_to("首页", root_path) %>
+      </li>
+      <li class="navbar-spacer"></li>
+      <li class="navbar-listItem">
+        <%= link_to("产品", products_path) %>
+      </li>
+
+      <% if !current_user %>
+        <li class="navbar-listItem">
+          <%= link_to("注册", new_user_registration_path) %>
+        </li>
+        <li class="navbar-spacer"></li>
+        <li class="navbar-listItem">
+          <%= link_to("登入", new_user_session_path) %>
+        </li>
+      <% else %>
+        <li class="navbar-listItem dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+              Hi!, <%= current_user.email %>
+              <b class="caret"></b>
+          </a>
+          <ul class="dropdown-menu">
+              <% if current_user.admin? %>
+                <li><%= link_to("后台管理", admin_products_path ) %></li>
               <% end %>
-            </ul>
+              <li><%= link_to("我的订单", account_orders_path ) %></li>
+              <li> <%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %> </li>
+          </ul>
+        </li>
+      <% end %>
+      <li class="navbar-spacer"></li>
+      <li class="navbar-listItem">
+        <%= link_to carts_path do%>
+                购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
+        <% end %>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<!-- logo + search -->
+<!--
+<div class="header">
+  <div class="logo"><a href="/products">下午茶居</a></div>
+
+  <div>
+	  <div class="search">
+		  <form action="/products/search" accept-charset="UTF-8" method="get">
+		  	<input name="utf8" type="hidden" value="✓">
+		    <input class="search-input" type="text" name="query_string" value="" placeholder="输入你要搜索的商品">
+		    <button type="submit" class="search-button pa tc"><i class="fa fa-search"></i></button>
+			</form>
+		</div>
+	</div>
+
+</div> -->
+
+<div class="header">
+  <div class="logo ">
+    <a href="/products">下午茶居</a>
+  </div>
+  <div class="search">
+            <form action="/products/search" accept-charset="UTF-8" method="get">
+      		  	<input name="utf8" type="hidden" value="✓">
+      		    <input class="search-input" type="text" name="query_string" value="" placeholder="输入你要搜索的商品">
+      		    <button type="submit" class="search-button pa tc"><i class="fa fa-search"></i></button>
+      			</form>
+          </div>
         </div>
-        <!-- /.navbar-collapse -->
+      </div>
     </div>
-    <!-- /.container-fluid -->
-</nav>
+
+<!-- menu -->

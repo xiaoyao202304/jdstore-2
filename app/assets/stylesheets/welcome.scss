@@ -1,3 +1,91 @@
 // Place all the styles related to the welcome controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+}
+
+/* Jumbotron */
+.jumbotron {
+  height: 500px;
+  background-image: url("https://ww3.sinaimg.cn/large/006tKfTcgy1fd9acwkzlxj30qe0jbe5o.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  font-family: Helvetica, Arial;
+  position: relative;
+  letter-spacing: 2px;
+
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: transparentize(#D08A91, .75);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .text-content {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+.jumbotron-title {
+	color: #fff;
+  text-align: center;
+  padding: 125px 20px 0;
+  font-size: 40px !important;
+  line-height: 1.5;
+}
+
+// .jumbotron h2{
+// 	text-align: center;
+//   color: #FFF;
+//   font-size: 40px;
+//   margin: 0;
+//   width: 100%;
+// }
+
+.jumbotron h2:first-child{
+  margin:120px 0 0;
+}
+
+/* Banner */
+.banner, .supporting {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.banner {
+  background-color:#36343f;
+  height:180px;
+  color: #fff;
+}
+
+.banner a{
+	background-color: rgba(216,25,47,.5);
+  color: #fff;
+  margin-top: 24px;
+  border:0px;
+}
+
+.section h3 {
+  margin: 0;
+  padding: 0 0 20px;
+  font-size: 25px;
+}
+
+.banner h3 {
+  margin: 0;
+  padding: 0;
+  color:#fff;
+}

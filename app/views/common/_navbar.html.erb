@@ -1,7 +1,9 @@
 <div class="navbar-wrap">
   <div class="navbar">
     <div class="navbar-left"><%=link_to("欢迎来到下午茶居！", products_path)%></div>
+
     <ul class="navbar-list">
+
       <% if !current_user %>
         <li class="navbar-listItem">
           <%= link_to("注册", new_user_registration_path) %>
@@ -24,13 +26,46 @@
               <li> <%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %> </li>
           </ul>
         </li>
-        <li class="navbar-spacer"></li>
-        <li class="navbar-listItem">
-          <%= link_to carts_path do%>
-                  购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
-          <% end %>
-        </li>
       <% end %>
+      <li class="navbar-spacer"></li>
+      <li class="navbar-listItem">
+        <%= link_to carts_path do%>
+                购物车 <i class="fa fa-shopping-cart"> </i> ( <%= current_cart.products.count %> )
+        <% end %>
+      </li>
     </ul>
   </div>
 </div>
+
+<!-- logo + search -->
+<!--
+<div class="header">
+  <div class="logo"><a href="/products">下午茶居</a></div>
+
+  <div>
+	  <div class="search">
+		  <form action="/products/search" accept-charset="UTF-8" method="get">
+		  	<input name="utf8" type="hidden" value="✓">
+		    <input class="search-input" type="text" name="query_string" value="" placeholder="输入你要搜索的商品">
+		    <button type="submit" class="search-button pa tc"><i class="fa fa-search"></i></button>
+			</form>
+		</div>
+	</div>
+
+</div> -->
+
+<div class="header">
+  <div class="logo ">
+    <a href="/products">下午茶居</a>
+  </div>
+  <div class="search">
+    <form action="/products/search" accept-charset="UTF-8" method="get">
+      <input name="utf8" type="hidden" value="✓">
+      <input class="search-input" type="text" name="query_string" value="" placeholder="输入你要搜索的商品">
+      <button type="submit" class="search-button pa tc"><i class="fa fa-search"></i></button>
+    </form>
+  </div>
+</div>
+
+
+<!-- menu -->

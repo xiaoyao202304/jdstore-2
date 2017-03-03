@@ -3,6 +3,13 @@
     <div class="navbar-left"><%=link_to("欢迎来到下午茶居！", products_path)%></div>
 
     <ul class="navbar-list">
+      <li class="navbar-listItem">
+        <%= link_to("首页", root_path) %>
+      </li>
+      <li class="navbar-spacer"></li>
+      <li class="navbar-listItem">
+        <%= link_to("产品", products_path) %>
+      </li>
 
       <% if !current_user %>
         <li class="navbar-listItem">
@@ -59,13 +66,14 @@
     <a href="/products">下午茶居</a>
   </div>
   <div class="search">
-    <form action="/products/search" accept-charset="UTF-8" method="get">
-      <input name="utf8" type="hidden" value="✓">
-      <input class="search-input" type="text" name="query_string" value="" placeholder="输入你要搜索的商品">
-      <button type="submit" class="search-button pa tc"><i class="fa fa-search"></i></button>
-    </form>
-  </div>
-</div>
-
+            <form action="/products/search" accept-charset="UTF-8" method="get">
+      		  	<input name="utf8" type="hidden" value="✓">
+      		    <input class="search-input" type="text" name="query_string" value="" placeholder="输入你要搜索的商品">
+      		    <button type="submit" class="search-button pa tc"><i class="fa fa-search"></i></button>
+      			</form>
+          </div>
+        </div>
+      </div>
+    </div>
 
 <!-- menu -->

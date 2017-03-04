@@ -1,31 +1,17 @@
-class ImageUploader < CarrierWave::Uploader::Base
+class AvatarUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:
   # include CarrierWave::RMagick
   include CarrierWave::MiniMagick
 
   # Choose what kind of storage to use for this uploader:
-  #storage :file
-  if Rails.env == "production"
-    storage :fog
-  elsif Rails.env == "development"
-    storage :file
-  end
+  storage :file
+  # storage :fog
 
   # Override the directory where uploaded files will be stored.
   # This is a sensible default for uploaders that are meant to be mounted:
   def store_dir
     "uploads/#{model.class.to_s.underscore}/#{mounted_as}/#{model.id}"
-  end
-
-  process resize_to_fit: [1200, 1200]
-
-  version :thumb do
-    process resize_to_fill: [200, 200]
-  end
-
-  version :medium do
-    process resize_to_fill: [750, 530]
   end
 
   # Provide a default URL as a default if there hasn't been a file uploaded:
@@ -47,6 +33,18 @@ class ImageUploader < CarrierWave::Uploader::Base
   # version :thumb do
   #   process resize_to_fit: [50, 50]
   # end
+
+
+
+  process resize_to_fill: [800, 800]
+
+  version :thumb do
+    process resize_to_fill: [200,200]
+  end
+
+  version :medium do
+    process resize_to_fill: [400,400]
+  end
 
   # Add a white list of extensions which are allowed to be uploaded.
   # For images you might use something like this:

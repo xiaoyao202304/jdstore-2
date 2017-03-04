@@ -45,35 +45,15 @@
 </div>
 
 <!-- logo + search -->
-<!--
-<div class="header">
-  <div class="logo"><a href="/products">下午茶居</a></div>
-
-  <div>
-	  <div class="search">
-		  <form action="/products/search" accept-charset="UTF-8" method="get">
-		  	<input name="utf8" type="hidden" value="✓">
-		    <input class="search-input" type="text" name="query_string" value="" placeholder="输入你要搜索的商品">
-		    <button type="submit" class="search-button pa tc"><i class="fa fa-search"></i></button>
-			</form>
-		</div>
-	</div>
-
-</div> -->
 
 <div class="header">
   <div class="logo ">
-    <a href="/products">下午茶居</a>
+    <a href="/">下午茶居</a>
   </div>
   <div class="search">
-            <form action="/products/search" accept-charset="UTF-8" method="get">
-      		  	<input name="utf8" type="hidden" value="✓">
-      		    <input class="search-input" type="text" name="query_string" value="" placeholder="输入你要搜索的商品">
-      		    <button type="submit" class="search-button pa tc"><i class="fa fa-search"></i></button>
-      			</form>
-          </div>
-        </div>
-      </div>
-    </div>
-
-<!-- menu -->
+    <%= form_tag search_products_path, :method => :get do%>
+	    <input class="search-input" type="text" name="q" value="<%= params[:q] %>" placeholder="输入你要搜索的商品">
+	    <button type="submit" class="search-button pa tc"><i class="fa fa-search"></i></button>
+		<% end %>
+  </div>
+</div>

@@ -1,3 +1,25 @@
+<!-- category menu -->
+<div class="row">
+  <div class="productcatnav" >
+    <div id="flipkart2-navbar">
+    <!-- <div class="home-title"> -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav navbar-left">
+          <li class="menuList-item">
+            <%= link_to("所有商品", products_path) %>
+          </li>
+          <% Category.all.each do |category| %>
+            <li class="menuList-item <%= 'menuList-activeItem' if params[:category] == category.name %>">
+              <%= link_to(category.name, products_path(category: category.name)) %>
+            </li>
+          <% end %>
+        </ul>
+      </div>
+    <!-- </div> -->
+    </div>
+  </div>
+</div>
+
 
 <div class="row">
   <div class="jumbotron">

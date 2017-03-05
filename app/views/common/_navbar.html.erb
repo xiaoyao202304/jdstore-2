@@ -1,6 +1,6 @@
 <div class="navbar-wrap">
   <div class="navbar">
-    <div class="navbar-left"><%=link_to("欢迎来到下午茶居！", products_path)%></div>
+    <div class="navbar-left"><%=link_to("欢迎来到下午茶居！", root_path)%></div>
 
     <ul class="navbar-list">
       <li class="navbar-listItem">
@@ -8,7 +8,7 @@
       </li>
       <li class="navbar-spacer"></li>
       <li class="navbar-listItem">
-        <%= link_to("产品", products_path) %>
+        <%= link_to("所有商品", products_path) %>
       </li>
 
       <% if !current_user %>

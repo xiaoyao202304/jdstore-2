@@ -16,11 +16,12 @@ class Admin::ProductsController < ApplicationController
   def new
     @product = Product.new
     @photo = @product.photos.build #for multi-pics
+    @categories = Category.all.map { |c| [c.name, c.id] }
   end
 
   def create
     @product = Product.new(product_params)
-
+    @categories = Category.all.map { |c| [c.name, c.id] }
     if @product.save
       if params[:photos] != nil
             params[:photos]['avatar'].each do |a|
@@ -35,11 +36,12 @@ class Admin::ProductsController < ApplicationController
 
   def edit
     @product = Product.find(params[:id])
+    @categories = Category.all.map { |c| [c.name, c.id] }
   end
 
   def update
     @product = Product.find(params[:id])
-
+    @categories = Category.all.map { |c| [c.name, c.id] }
     if params[:photos] != nil
       @product.photos.destroy_all #need to destroy old pics first
 
@@ -67,6 +69,6 @@ class Admin::ProductsController < ApplicationController
   private
 
   def product_params
-    params.require(:product).permit(:title, :description, :quantity, :price, :image)
+    params.require(:product).permit(:title, :description, :quantity, :price, :image, :category_id)
   end
 end

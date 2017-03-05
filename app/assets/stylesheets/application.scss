@@ -62,6 +62,31 @@
   color: #C81623; /*鼠标一上去的时候，字体变成红色*/
 }
 
+/* category menu*/
+.productcatnav {
+  // border-bottom: 1px solid #DDDDDD;
+  background-color: #f5f5f5;
+  padding: 0 50px;
+  .nav li a:hover{
+    color: #C81623;
+  }
+}
+
+.menuList-item {
+  a{
+    color: #36343f;
+    font-size: 16px;
+  }
+}
+
+.menuList-activeItem {
+  a {
+    color: #C81623;
+  }
+}
+//end of category menu
+
+
 .header {
   width: 1200px; /*宽度1200px*/
   margin: 0 auto; /*水平居中*/
@@ -138,6 +163,7 @@
 	padding-bottom: 30px;
 	position: relative;
 	width: 100%;
+  border-top: 1px solid #DDDDDD;
 }
 .footer p {
 	margin: 0;

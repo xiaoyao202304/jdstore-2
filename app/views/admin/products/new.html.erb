@@ -19,6 +19,10 @@
   </div>
 
   <div class="group">
+    <%= select_tag(:category_id, options_for_select(@categories), :prompt => "类别") %> <br><br>
+  </div>
+
+  <div class="group">
     <%#= f.input :image, as: :file %>
     <%= f.label :avatar %>（一次选中5张照片上传）<br>
     <%= f.file_field :avatar, :multiple => true, name: "photos[avatar][]" %>

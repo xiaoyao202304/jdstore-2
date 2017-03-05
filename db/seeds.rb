@@ -15,6 +15,10 @@ u.password_confirmation = "111111"   # 最少要六码
 u.is_admin = true
 u.save
 
+Category.create(name: "Lomonosov俄罗斯瓷器")
+Category.create(name: "月夜玻璃器具")
+Category.create(name: "景德镇")
+Category.create(name: "九谷烧")
 
 # Product.create!(title: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
 #                  description: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",

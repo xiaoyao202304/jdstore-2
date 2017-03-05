@@ -20,57 +20,109 @@ Category.create(name: "月夜玻璃器具")
 Category.create(name: "景德镇")
 Category.create(name: "九谷烧")
 
-# Product.create!(title: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
-#                  description: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
-#                  price: 858,
-#                  quantity: 10,
-#                  image: open("https://ww2.sinaimg.cn/large/006tKfTcgy1fd9m1yrxcij308c069aci.jpg")
-#                  )
-# Product.create!(title: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
-#                 description: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
-#                 price: 618,
-#                 quantity: 10,
-#                 image: open("https://ww1.sinaimg.cn/large/006tKfTcgy1fd9mg28g3sj308c069gnf.jpg")
-#                 )
-# Product.create!(title: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
-#                  description: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
-#                  price: 388,
-#                  quantity: 10,
-#                  image: open("https://ww1.sinaimg.cn/large/006tKfTcgy1fd9mo455mwj308c069acc.jpg")
-#                  )
-# Product.create!(title: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
-#                 description: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
-#                 price: 338,
-#                 quantity: 10,
-#                 image: open("https://ww4.sinaimg.cn/large/006tKfTcgy1fd9mphkylpj308c069gnl.jpg")
-#                 )
-# Product.create!(title: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
-#                  description: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
-#                  price: 338,
-#                  quantity: 10,
-#                  image: open("https://ww1.sinaimg.cn/large/006tKfTcgy1fd9mq3ohz4j308c06940k.jpg")
-#                  )
-# Product.create!(title: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
-#                 description: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
-#                 price: 198,
-#                 quantity: 10,
-#                 image: open("https://ww4.sinaimg.cn/large/006tKfTcgy1fd9mqopx0ij308c0693zk.jpg")
-#                 )
-# Product.create!(title: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
-#                  description: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
-#                  price: 328,
-#                  quantity: 10,
-#                  image: open("https://ww2.sinaimg.cn/large/006tKfTcgy1fd9mr23hp2j308c0690uq.jpg")
-#                  )
-# Product.create!(title: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
-#                 description: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
-#                 price: 658,
-#                 quantity: 10,
-#                 image: open("https://ww1.sinaimg.cn/large/006tKfTcgy1fd9mroqqqkj308c06976o.jpg")
-#                 )
-# Product.create!(title: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
-#                  description: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
-#                  price: 618,
-#                  quantity: 10,
-#                  image: open("https://ww2.sinaimg.cn/large/006tKfTcgy1fd9ms3cmbtj308c069gn7.jpg")
-#                  )
+Product.create!(title: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
+                 description: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
+                 price: 858,
+                 quantity: 10,
+                 category_id: 1,
+                 image: open("https://ww2.sinaimg.cn/large/006tKfTcgy1fd9m1yrxcij308c069aci.jpg")
+                 )
+Photo.create!(product_id: 1,
+              avatar: open("https://ww2.sinaimg.cn/large/006tKfTcgy1fd9m1yrxcij308c069aci.jpg")
+              )
+
+
+Product.create!(title: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
+                description: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
+                price: 618,
+                quantity: 10,
+                category_id: 1,
+                image: open("https://ww1.sinaimg.cn/large/006tKfTcgy1fd9mg28g3sj308c069gnf.jpg")
+                )
+Photo.create!(product_id: 2,
+              avatar: open("https://ww1.sinaimg.cn/large/006tKfTcgy1fd9mg28g3sj308c069gnf.jpg")
+              )
+
+
+Product.create!(title: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
+                 description: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
+                 price: 388,
+                 quantity: 10,
+                 category_id: 1,
+                 image: open("https://ww1.sinaimg.cn/large/006tKfTcgy1fd9mo455mwj308c069acc.jpg")
+                 )
+Photo.create!(product_id: 3,
+              avatar: open("https://ww1.sinaimg.cn/large/006tKfTcgy1fd9mo455mwj308c069acc.jpg")
+              )
+
+
+Product.create!(title: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
+                description: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
+                price: 338,
+                quantity: 10,
+                category_id: 1,
+                image: open("https://ww4.sinaimg.cn/large/006tKfTcgy1fd9mphkylpj308c069gnl.jpg")
+                )
+Photo.create!(product_id: 4,
+              avatar: open("https://ww4.sinaimg.cn/large/006tKfTcgy1fd9mphkylpj308c069gnl.jpg")
+              )
+
+
+Product.create!(title: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
+                 description: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
+                 price: 338,
+                 quantity: 10,
+                 category_id: 1,
+                 image: open("https://ww1.sinaimg.cn/large/006tKfTcgy1fd9mq3ohz4j308c06940k.jpg")
+                 )
+Photo.create!(product_id: 5,
+              avatar: open("https://ww1.sinaimg.cn/large/006tKfTcgy1fd9mq3ohz4j308c06940k.jpg")
+              )
+
+
+Product.create!(title: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
+                description: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
+                price: 198,
+                quantity: 10,
+                category_id: 1,
+                image: open("https://ww4.sinaimg.cn/large/006tKfTcgy1fd9mqopx0ij308c0693zk.jpg")
+                )
+Photo.create!(product_id: 6,
+              avatar: open("https://ww4.sinaimg.cn/large/006tKfTcgy1fd9mqopx0ij308c0693zk.jpg")
+              )
+
+
+Product.create!(title: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
+                 description: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
+                 price: 328,
+                 quantity: 10,
+                 category_id: 1,
+                 image: open("https://ww2.sinaimg.cn/large/006tKfTcgy1fd9mr23hp2j308c0690uq.jpg")
+                 )
+Photo.create!(product_id: 7,
+              avatar: open("https://ww2.sinaimg.cn/large/006tKfTcgy1fd9mr23hp2j308c0690uq.jpg")
+              )
+
+
+Product.create!(title: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
+                description: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
+                price: 658,
+                quantity: 10,
+                category_id: 1,
+                image: open("https://ww1.sinaimg.cn/large/006tKfTcgy1fd9mroqqqkj308c06976o.jpg")
+                )
+Photo.create!(product_id: 8,
+              avatar: open("https://ww1.sinaimg.cn/large/006tKfTcgy1fd9mroqqqkj308c06976o.jpg")
+              )
+
+
+Product.create!(title: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
+                 description: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/茶壶",
+                 price: 618,
+                 quantity: 10,
+                 category_id: 1,
+                 image: open("https://ww2.sinaimg.cn/large/006tKfTcgy1fd9ms3cmbtj308c069gn7.jpg")
+                 )
+Photo.create!(product_id: 9,
+              avatar: open("https://ww2.sinaimg.cn/large/006tKfTcgy1fd9ms3cmbtj308c069gn7.jpg")
+              )

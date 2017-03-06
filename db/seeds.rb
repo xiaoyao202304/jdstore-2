@@ -5,6 +5,8 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+
+
 u = User.new
 u.email = "yao@gmail.com"           # 可以改成自己的 email
 
@@ -126,3 +128,48 @@ Product.create!(title: "俄罗斯皇家瓷器Lomonosov 蓝色网纹 蓝茶杯/�
 Photo.create!(product_id: 9,
               avatar: open("https://ww2.sinaimg.cn/large/006tKfTcgy1fd9ms3cmbtj308c069gn7.jpg")
               )
+
+Product.create!(title: "俄罗斯皇家瓷器Lomonosov 经典钴蓝网纹Cobalt net 茶杯/壶",
+                 description: "俄罗斯皇家瓷器Lomonosov 经典钴蓝网纹Cobalt net 茶杯/壶",
+                 price: 868,
+                 quantity: 10,
+                 category_id: 1,
+                 image: open("https://ww3.sinaimg.cn/large/006tKfTcgy1fdcxgkcli9j30m80go0vu.jpg")
+                 )
+Photo.create!(product_id: 10,
+              avatar: open("https://ww3.sinaimg.cn/large/006tKfTcgy1fdcxgkcli9j30m80go0vu.jpg")
+              )
+
+
+Product.create!(title: "日本制造 月夜野工房 手工烧制 樱吹雪 晕染樱花玻璃制品",
+                 description: "日本制造 月夜野工房 手工烧制 樱吹雪 晕染樱花玻璃制品",
+                 price: 58,
+                 quantity: 10,
+                 category_id: 2,
+                 image: open("https://ww3.sinaimg.cn/large/006tKfTcgy1fdcx5djluhj30m80m8q8k.jpg")
+                 )
+Photo.create!(product_id: 11,
+             avatar: open("https://ww3.sinaimg.cn/large/006tKfTcgy1fdcx5djluhj30m80m8q8k.jpg")
+             )
+
+Product.create!(title: "景德镇 全手工拉坯 手绘 青花瓷 盖碗参盅 山水/万花",
+                description: "景德镇 全手工拉坯 手绘 青花瓷 盖碗参盅 山水/万花",
+                price: 368,
+                quantity: 10,
+                category_id: 3,
+                image: open("https://ww4.sinaimg.cn/large/006tKfTcgy1fdcxngmmc5j30m80fw45l.jpg")
+                )
+Photo.create!(product_id: 12,
+            avatar: open("https://ww4.sinaimg.cn/large/006tKfTcgy1fdcxngmmc5j30m80fw45l.jpg")
+            )
+
+Product.create!(title: "日本制 九谷烧 KISSYO吉祥 赠物缘福 彩绘瓷器 酒盅/茶杯",
+                description: "日本制 九谷烧 KISSYO吉祥 赠物缘福 彩绘瓷器 酒盅/茶杯",
+                price: 98,
+                quantity: 10,
+                category_id: 4,
+                image: open("https://ww1.sinaimg.cn/large/006tKfTcgy1fdcxs6s08vj30m80lw11i.jpg")
+                )
+Photo.create!(product_id: 13,
+            avatar: open("https://ww1.sinaimg.cn/large/006tKfTcgy1fdcxs6s08vj30m80lw11i.jpg")
+            )

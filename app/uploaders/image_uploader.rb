@@ -28,6 +28,8 @@ class ImageUploader < CarrierWave::Uploader::Base
     process resize_to_fill: [500, 500]
   end
 
+
+
   # process :quality => 100
   # version :thumb do
   #   process :quality => 90

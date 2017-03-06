@@ -32,3 +32,26 @@
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.22);
   }
 }
+/*  products search page */
+.productbg {
+  padding-top: 30px;
+  .container{
+    margin-left: auto;
+    margin-right: auto;
+    width:1024px;
+  }
+}
+
+.product-item {
+  margin: 10px;
+}
+.pi-img-wrapper {
+  padding: 12px;
+  -moz-transition: transform 10s;
+  -webkit-transition: transform 10s;
+  transition: 0.35s;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+  &:hover{
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.22);
+  }
+}

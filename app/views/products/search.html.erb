@@ -1,8 +1,7 @@
 <%= render :partial => "products/menu" %>
 
 <div class="productbg">
-  <div class="nocontent">
-  </div>
+
   <div class="row container">
     <% if @query_string.blank? %>
     <div class="welcome-content-title">
@@ -22,17 +21,13 @@
 
           <div class="product-item">
             <div class="pi-img-wrapper">
-              <!-- <img src="/images/iwatch2-02.png" class="img-responsive" alt="Berry Lace Dress"> -->
               <% if product.image.present? %>
                 <%= image_tag(product.image.medium.url, class: "img-responsive") %>
               <% else %>
                 <%= image_tag("http://placehold.it/200x200&text=No Pic", class: "img-responsive") %>
               <% end %>
-              <div>
-                  <%#= link_to("VIEW", product_path(product), class: "btn")%>
-              </div>
             </div>
-            <hr>
+            <!-- <hr> -->
           </div>
         <% end %>
       </div>
